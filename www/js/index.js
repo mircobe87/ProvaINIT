@@ -5,6 +5,8 @@ app.initialize = function() {
 app.bindEvents = function() {
     document.addEventListener('deviceready', this.onDeviceReady, false);
 };
+app.platform = undefined;
 app.onDeviceReady = function() {
     alert("API Cordova pronte all'uso");
+    $("#platform").text(device.platform);
 };

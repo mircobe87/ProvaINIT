@@ -7,36 +7,108 @@
 		<script src="js/jquery.min.js"></script>
 		<!-- Kendo UI Mobile combined JavaScript -->
 		<script src="js/kendo.mobile.min.js"></script>
+		
+		<link href="css/index.css" rel="stylesheet"/>
         <title>Hello World</title>
     </head>
     <body>
     
         <!-- START APP -->
-        <div id="home" data-role="view" data-title="Home" data-layout="main-layout">
-			Home
-		</div>
-
-		<div id="settings" data-role="view" data-title="Settings" data-layout="main-layout">
-			Settings
-		</div>
-
-		<div id="layout" data-role="layout" data-id="main-layout">
-			<div data-role="header">
-				<div data-role="navbar">
-				    <span data-role="view-title"></span>
-				</div>
+        <!-- Drawer -->
+        <div data-role="drawer" id="drawer">
+        	<ul data-role="listview" data-type="group">
+	        	<li>KendoUI Mobile
+	            	<ul>
+		                <li data-icon="home"><a href="#home" data-transition="none">Home</a></li>
+	            	</ul>
+	        	</li>
+	        	<li>Info
+	            	<ul>
+		                <li data-icon="info"><a href="#cordova" data-transition="none">Cordova</a></li>
+		                <li data-icon="info"><a href="#browser" data-transition="none">Browser</a></li>
+		                <li data-icon="info"><a href="#display" data-transition="none">Display</a></li>
+	            	</ul>
+	        	</li>
+    		</ul>
+        </div>
+        
+        <!-- View Home -->
+        <div data-role="view" data-title="KendoUI Mobile" id="home" data-layout="default">
+			<div class="home-content">
+				<p></p>
+				<img class="home-content" src="img/kendo-logo.png" alt="Kendo UI">
+				<h2>Intro</h2>
+				<p>
+					Questa applicazione &egrave stata realizzata in <code>HTML5</code>,
+					<code>CSS</code> e <code>JavaScript</code> dove, per quanto riguarda l'interfaccia
+					grafica, si &egrave sfruttato il framework <a href="http://www.kendoui.com/mobile.aspx">Kendo UI Mobile</a> e, per rendere
+					possibile l'accesso hai sensori del dispositivo, si sono sfruttate le potenziali&agrave
+					del framework <a href="http://phonegap.com/">Phonegap</a>.
+				</p>
+				<h2>In Cosa Consiste</h2>
+				<p>
+					L'intera applicazione non &egrave altro che un sito web memorizzato completamente in locale
+					e caricato in una WebView realizzata in codice nativo per l'attuale piattaforma che si
+					st&agrave utilizzando, in questo caso <span id="platform">BOH!</span>.
+				</p>
+				<p>
+					L'intero processo di "compilazione" &egrave a carica del builder remoto di Phonegap che
+					produce come risultato i vari pacchetti, uno per ogni piattaforma che si &egrave deciso
+					di supportare.
+				</p>
+				<p>
+					Realizzare questo genere di applicazioni, definite <em>ibride</em>, permette sia di scrivere
+					un unico codice comune indipendente dalla piattavorma che verr&agrave supportata e in pi&ugrave,
+					tali applicazioni possono essere distribuite attraverso i comuni store (AppStore, Google Play,
+					ecc...).
+				</p>
+				<h2>In Questa App</h2>
+				<p>
+					Questa app consente di navigare nel proprio contenuto tramite un <em>drawer</em> che pu&ograve
+					essere mostrato e nascosto attraverso il bottone oppure tramite swipe verso destra o sinistra
+					reciprocamente.
+				</p>
+				<p>
+					All'interno del drawer sono presenti le varie <em>view</em> raggiungibili divise per categoria.
+				</p>
 			</div>
-			<div data-role="footer">
-				<div data-role="tabstrip">
-					<a data-icon="home" href="#home">Home</a>
-					<a data-icon="settings" href="#settings">Settings</a>
-				</div>
-			</div>
 		</div>
+        <div data-role="view" data-title="Device Info" id="cordova" data-layout="default">Informazioni prese da Cordova...</div>
+        <div data-role="view" data-title="Browser Info" id="browser" data-layout="default">Informazioni Browser...</div>
+        
+        <!-- View Informazioni Schermo -->
+        <div data-role="view" data-title="Display Info" id="display" data-layout="default">
+        	<ul data-role="listview" data-style="inset" data-type="group">
+		        <li>
+		            Area Display
+		            <ul>
+		                <li>altezza: <span id="height"></span> px</li>
+		                <li>larghezza: <span id="width"></span> px</li>
+		            </ul>
+		        </li>
+		        <li>
+		            Area Display Utile
+		            <ul>
+		                <li>altezza: <span id="u-height"></span> px</li>
+		                <li>larghezza: <span id="u-width"></span> px</li>
+		            </ul>
+		        </li>
+		    </ul>
+        </div>
+        
+        <div data-role="layout" data-id="default">
+        	<div data-role="header">
+        		<div data-role="navbar">
+        			<a data-role="button" data-rel="drawer" href="#drawer" data-icon="more" data-align="left"></a>
+        			<span data-role="view-title"></span>
+        		</div>
+        	</div>
+        </div>
 		<!-- END APP -->
         
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/display.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
