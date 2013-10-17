@@ -7,6 +7,19 @@ app.bindEvents = function() {
 };
 app.platform = undefined;
 app.onDeviceReady = function() {
-    alert("API Cordova pronte all'uso");
-    $("#platform").text(device.platform);
+	// da commentare prima del building!!!
+	/*
+	window.device = {
+		name:     "fake device name",
+		cordova:  "fake cordova version",
+		platform: "fake platform",
+		uuid:     "fake UUID",
+		version:  "fake platform version",
+		model:    "fake device model"
+	};
+	*/
+	// fino a qui!
+	
+    for(updater in this.updaters) (this.updaters[updater])();
 };
+app.updaters = {};

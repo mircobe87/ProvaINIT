@@ -1,0 +1,9 @@
+#cordova-status {
+	text-align: center;
+}
+#cordova-status img{
+	padding-top: 8px;
+}
+#cordova-status span{
+	color: rgb(255,0,0);
+}

@@ -1,4 +1,4 @@
-(function(){
+app.updaters.updateInfoBrowser = function(){
 	//Browser
 	$("#b-codeName").text(navigator.appCodeName);
 	$("#b-name").text(navigator.appName);
@@ -13,4 +13,4 @@
 	// User-Agent
 	$("#b-useragent-h").text(navigator.userAgent);
 	$("#b-useragent-l").text(navigator.systemLanguage);
-})();
+};
