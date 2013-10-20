@@ -1,2 +1,11 @@
 # ignora file temporanei
 *~
+
+# ignora cartelle per il building locale
+merges/
+platforms/
+plugins/
+.cordova/
+
+# ignora metadati progetto eclipse
+.project
