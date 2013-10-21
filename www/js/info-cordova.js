@@ -1,5 +1,5 @@
-
-app.updaters.updateInfoCordova = function(){
+/*
+window.app.updaters.updateInfoCordova = function(){
 	console.log("[exe-begin] app.updaters.updateInfoCordova()");
 	$("#cordova-status img:first").attr("src", "img/logo-cordova_ok.png");
     $("#cordova-status span:first").text("caricate");
@@ -13,3 +13,4 @@ app.updaters.updateInfoCordova = function(){
 	console.log("[exe-end] app.updaters.updateInfoCordova()");
 };
 console.log("[js/info-cordova.js] creato 'app.updaters.updateInfoCordova()'");
+*/

@@ -1,4 +1,4 @@
-app.updaters.updateInfoBrowser = function(){
+(function(){
 	console.log("[exe-begin] app.updaters.updateInfoBrowser()");
 	//Browser
 	$("#b-codeName").text(navigator.appCodeName);
@@ -15,5 +15,5 @@ app.updaters.updateInfoBrowser = function(){
 	$("#b-useragent-h").text(navigator.userAgent);
 	$("#b-useragent-l").text(navigator.systemLanguage);
 	console.log("[exe-end] app.updaters.updateInfoBrowser()");
-};
+})();
 console.log("[js/browser.js] creato 'app.updaters.updateInfoBrowser()'");
