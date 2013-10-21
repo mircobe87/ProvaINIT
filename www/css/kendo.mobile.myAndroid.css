@@ -1,0 +1,17 @@
+.km-android .km-view .km-content {
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, #000),color-stop(1, #333));
+    background-image: -moz-linear-gradient(50% 0,50% 100%,#000,#333);
+    background-image: -ms-linear-gradient(50% 0,50% 100%,#000,#333);
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+.km-android .km-view .km-navbar {
+    background-color: rgb(25, 25, 25);
+}
+.km-android .km-view .km-tabstrip .km-button {
+    background-color: rgb(25, 25, 25);
+}
+.km-android .km-view .km-tabstrip .km-button.km-state-active {
+    background-color: rgb(25, 25, 25);
+}
